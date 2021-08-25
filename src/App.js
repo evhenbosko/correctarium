@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
-
+ import react,{useState} from 'react'
+ 
 function App() {
+  const [language,setLanguage]=useState(0.05)
+const price=(language,mimetype,count)=>{
+
+  let result=count
+  return result
+}
+const deadLine=(language,mimetype,count,currentdate)=>{}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <select name="language" class="filter-todo">
+        <option value="Російська">Російська</option>
+        <option value="Українська">Українська</option>
+        <option value="English">English</option>
+
+    </select>
+    <select name="language" class="filter-todo" o>
+        <option value="Російська" nChange={(e)=>{setLanguage(0.05)}}>Pdf,Txt,Doc,Docx</option>
+        <option value="Українська" onSelect={(e)=>{setLanguage(0.12)}}>інший</option>
+        
+    </select>
+    <button onClick={console.log(language)}></button>
     </div>
   );
 }
